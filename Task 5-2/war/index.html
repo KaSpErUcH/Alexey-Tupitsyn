@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Hello App Engine</title>
+     <script src="jquery-3.2.1.min.js"></script>
+  </head>
+  		<script>
+  		var task;
+		$( function() 
+		{
+ 			$('#send1').click( function() 
+ 			{
+ 				task = 1;
+ 				var surname = $('#surname').val();
+ 				var name = $('#name').val();
+ 				var patronymic = $('#patronymic').val();
+ 				var number = $('#number').val();
+ 				var city = $('#city').val();
+ 				var brand = $('#brand').val();
+ 				var year = $('#year').val();
+ 				var body = $('#body').val();
+ 				var box = $('#box').val();
+ 				var drive = $('#drive').val();
+ 				var price = $('#price').val();
+ 				var mileage = $('#mileage').val();
+ 				$('#result1').load( "/task_5?task="+task+"&surname="+surname+"&name="+name+"&patronymic="+patronymic+"&number="+number+"&city="+city+"&brand="+brand+"&year="+year+"&body="+body+"&box="+box+"&drive="+drive+"&price="+price+"&mileage="+mileage);
+ 			});
+ 		} );
+ 	
+ 		$( function() 
+ 		{
+ 			$('#send2').click( function() 
+ 		 	{
+ 		 		task = 2;
+ 		 		var surname = $('#surname').val();
+ 				var name = $('#name').val();
+ 				var patronymic = $('#patronymic').val();
+ 				var number = $('#number').val();
+ 				var city = $('#city').val();
+ 				var brand = $('#brand').val();
+ 				var year = $('#year').val();
+ 				var body = $('#body').val();
+ 				var box = $('#box').val();
+ 				var drive = $('#drive').val();
+ 				var price = $('#price').val();
+ 				var mileage = $('#mileage').val();
+ 		 		var brand1 = $('#brand1').val();
+ 		 		var year1 = $('#year1').val();
+ 		 		var body1 = $('#body1').val();
+ 		 		var box1 = $('#box1').val();
+ 		 		var drive1 = $('#drive1').val();
+ 		 		var price1 = $('#price1').val();
+ 		 		var mileage1 = $('#mileage1').val();
+ 		 		$('#result2').load( "/task_5?task="+task+"&brand1="+brand1+"&year1="+year1+"&body1="+body1+"&box1="+box1+"&drive1="+drive1+"&price1="+price1+"&mileage1="+mileage1+"&surname="+surname+"&name="+name+"&patronymic="+patronymic+"&number="+number+"&city="+city+"&brand="+brand+"&year="+year+"&body="+body+"&box="+box+"&drive="+drive+"&price="+price+"&mileage="+mileage);
+ 		 	} );
+		 } );
+ 	
+		</script>
+  <body>
+    <h1>Продать автомобиль</h1>
+	<h2>Продавец: </h2>
+    <form>
+    <p>Фамилия:</p>
+    <input id="surname" type="text" />
+    <p>Имя:</p>
+    <input id="name" type="text" />
+    <p>Отчество:</p>
+    <input id="patronymic" type="text" />
+    <p>Телефон:</p>
+    <input id="number" type="text" />
+    <p>Город:</p>
+    <input id="city" type="text" />
+    </form>
+    <h2>Автомобиль: </h2>
+    <form>
+    <p>Марка:</p>
+    <input id="brand" type="text" />
+    <p>Год выпуска:</p>
+    <input id="year" type="text" />
+    <p>Кузов:</p>
+    <input id="body" type="text" />
+    <p>Коробка:</p>
+    <input id="box" type="text" />
+    <p>Привод:</p>
+    <input id="drive" type="text" />
+    <p>Цена:</p>
+    <input id="price" type="text" />
+    <p>Пробег:</p>
+    <input id="mileage" type="text" />
+    </form>
+    <button id="send1">Продать</button>
+    <p>Результат: <b><span id="result1"></span></b></p>
+    <h1>Купить автомобиль</h1>
+    <h2>Автомобиль: </h2>
+    <form>
+    <p>Марка:</p>
+    <input id="brand1" type="text" />
+    <p>Год выпуска:</p>
+    <input id="year1" type="text" />
+    <p>Кузов:</p>
+    <input id="body1" type="text" />
+    <p>Коробка:</p>
+    <input id="box1" type="text" />
+    <p>Привод:</p>
+    <input id="drive1" type="text" />
+    <p>Цена:</p>
+    <input id="price1" type="text" />
+    <p>Пробег:</p>
+    <input id="mileage1" type="text" />
+    </form>
+	<button id="send2">Найти</button>
+	<p>Результаты поиска: <b><span id="result2"></span></b></p>
+  </body>
+</html>
